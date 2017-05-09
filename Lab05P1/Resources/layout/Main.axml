@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp">
+    <TextView
+        android:text="Proporciona el número de teléfono"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textAlignment="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PhoneNumberText"
+        android:text="1-855-XAMARIN"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+    <Button
+        android:text="Convertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TranslateButton"
+        android:paddingTop="5dp" />
+    <Button
+        android:text="Llamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CallButton"
+        android:paddingTop="5dp" />
+</LinearLayout>
