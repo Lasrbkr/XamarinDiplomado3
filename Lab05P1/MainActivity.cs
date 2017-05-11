@@ -9,6 +9,7 @@ namespace Lab05P1
     {
         string TranslatedNumber = string.Empty;
         EditText PhoneNumberText;
+        TextView ResultText;
         Button TranslateButton;
         Button CallButton;
 
@@ -20,6 +21,7 @@ namespace Lab05P1
             SetContentView(Resource.Layout.Main);
 
             PhoneNumberText = FindViewById<EditText>(Resource.Id.PhoneNumberText);
+            ResultText = FindViewById<TextView>(Resource.Id.ResultText);
             TranslateButton = FindViewById<Button>(Resource.Id.TranslateButton);
             CallButton = FindViewById<Button>(Resource.Id.CallButton);
 
@@ -27,6 +29,8 @@ namespace Lab05P1
 
             TranslateButton.Click += TranslateButton_Click;
             CallButton.Click += CallButton_Click;
+
+            Validate();
         }
 
         void TranslateButton_Click(object sender, System.EventArgs e)
@@ -61,6 +65,18 @@ namespace Lab05P1
             CallDialog.SetNegativeButton("Cancelar", delegate { });
             // Mostrar el cuadro de diálogo al usuario y esperar una respuesta.
             CallDialog.Show();
+        }
+
+        private async void Validate()
+        {
+            SALLab05.ServiceClient ServiceClient = new SALLab05.ServiceClient();
+            string StudentEmail = "tucorreo";
+            string Password = "tucontraseña";
+            string myDevice = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
+
+            SALLab05.ResultInfo Result = await ServiceClient.ValidateAsync(StudentEmail, Password, myDevice);
+
+            ResultText.Text = $"{Result.Status}\n{Result.Fullname}\n{Result.Token}";
         }
     }
 }
