@@ -63,11 +63,14 @@ namespace Lab05P1
 			// aapt resource value: 0x7f060003
 			public const int CallButton = 2131099651;
 			
+			// aapt resource value: 0x7f060004
+			public const int CallHistory = 2131099652;
+			
 			// aapt resource value: 0x7f060001
 			public const int PhoneNumberText = 2131099649;
 			
-			// aapt resource value: 0x7f060004
-			public const int ResultText = 2131099652;
+			// aapt resource value: 0x7f060005
+			public const int ResultText = 2131099653;
 			
 			// aapt resource value: 0x7f060002
 			public const int TranslateButton = 2131099650;
@@ -119,6 +122,9 @@ namespace Lab05P1
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f050001
+			public const int CallHistory = 2131034113;
 			
 			// aapt resource value: 0x7f050000
 			public const int app_name = 2131034112;
