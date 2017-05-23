@@ -2,10 +2,11 @@
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
+using Android.Content;
 
 namespace Lab05P1
 {
-    [Activity(Label = "Phone App", MainLauncher = true)]
+    [Activity(Label = "Phone App", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         string TranslatedNumber = string.Empty;
@@ -14,6 +15,7 @@ namespace Lab05P1
         Button TranslateButton;
         Button CallButton;
         Button CallHistoryButton;
+        Button ValidarAButton;
         static readonly List<string> PhoneNumbers = new List<string>();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,15 +30,17 @@ namespace Lab05P1
             TranslateButton = FindViewById<Button>(Resource.Id.TranslateButton);
             CallButton = FindViewById<Button>(Resource.Id.CallButton);
             CallHistoryButton = FindViewById<Button>(Resource.Id.CallHistory);
+            ValidarAButton = FindViewById<Button>(Resource.Id.ValidarActividadButton);
 
             CallButton.Enabled = false;
 
             TranslateButton.Click += TranslateButton_Click;
             CallButton.Click += CallButton_Click;
             CallHistoryButton.Click += CallHistoryButton_Click;
+            ValidarAButton.Click += ValidarActividadButton_Click;
 
             //Validate();
-            ValidateLab06();
+            //ValidateLab06();
         }
 
         void TranslateButton_Click(object sender, System.EventArgs e)
@@ -77,10 +81,16 @@ namespace Lab05P1
 
         void CallHistoryButton_Click(object sender, System.EventArgs e)
         {
-            var Intent = new Android.Content.Intent(this, typeof(CallHistoryActivity));
-            Intent.PutStringArrayListExtra("phone_numbers", PhoneNumbers);
+            var IntentHistory = new Android.Content.Intent(this, typeof(CallHistoryActivity));
+            IntentHistory.PutStringArrayListExtra("phone_numbers", PhoneNumbers);
 
-            StartActivity(Intent);
+            StartActivity(IntentHistory);
+        }
+
+        void ValidarActividadButton_Click(object sender, System.EventArgs e)
+        {
+            var intent = new Intent(this, typeof(ValidacionActivity));
+            StartActivity(intent);
         }
 
         private async void Validate()

@@ -41,6 +41,11 @@
         android:id="@+id/CallHistory"
         android:layout_margin="5dp"
         android:enabled="false" />
+    <Button
+        android:text="@string/ValidarActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ValidarActividadButton" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

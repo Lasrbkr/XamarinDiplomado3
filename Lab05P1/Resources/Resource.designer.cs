@@ -60,23 +60,41 @@ namespace Lab05P1
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int CallButton = 2131099651;
+			// aapt resource value: 0x7f050003
+			public const int CallButton = 2131034115;
 			
-			// aapt resource value: 0x7f060004
-			public const int CallHistory = 2131099652;
+			// aapt resource value: 0x7f050004
+			public const int CallHistory = 2131034116;
 			
-			// aapt resource value: 0x7f060001
-			public const int PhoneNumberText = 2131099649;
+			// aapt resource value: 0x7f050001
+			public const int PhoneNumberText = 2131034113;
 			
-			// aapt resource value: 0x7f060005
-			public const int ResultText = 2131099653;
+			// aapt resource value: 0x7f050006
+			public const int ResultText = 2131034118;
 			
-			// aapt resource value: 0x7f060002
-			public const int TranslateButton = 2131099650;
+			// aapt resource value: 0x7f05000b
+			public const int ResultValidateText = 2131034123;
 			
-			// aapt resource value: 0x7f060000
-			public const int textView1 = 2131099648;
+			// aapt resource value: 0x7f050002
+			public const int TranslateButton = 2131034114;
+			
+			// aapt resource value: 0x7f050005
+			public const int ValidarActividadButton = 2131034117;
+			
+			// aapt resource value: 0x7f05000a
+			public const int ValidarButton = 2131034122;
+			
+			// aapt resource value: 0x7f050007
+			public const int textEmailAddress = 2131034119;
+			
+			// aapt resource value: 0x7f050009
+			public const int textPassword = 2131034121;
+			
+			// aapt resource value: 0x7f050000
+			public const int textView1 = 2131034112;
+			
+			// aapt resource value: 0x7f050008
+			public const int textView2 = 2131034120;
 			
 			static Id()
 			{
@@ -91,8 +109,11 @@ namespace Lab05P1
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int Main = 2130968576;
+			// aapt resource value: 0x7f030000
+			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Validacion = 2130903041;
 			
 			static Layout()
 			{
@@ -104,30 +125,17 @@ namespace Lab05P1
 			}
 		}
 		
-		public partial class Mipmap
-		{
-			
-			// aapt resource value: 0x7f030000
-			public const int Icon = 2130903040;
-			
-			static Mipmap()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Mipmap()
-			{
-			}
-		}
-		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int CallHistory = 2131034113;
+			// aapt resource value: 0x7f040001
+			public const int CallHistory = 2130968577;
 			
-			// aapt resource value: 0x7f050000
-			public const int app_name = 2131034112;
+			// aapt resource value: 0x7f040002
+			public const int ValidarActividad = 2130968578;
+			
+			// aapt resource value: 0x7f040000
+			public const int app_name = 2130968576;
 			
 			static String()
 			{
