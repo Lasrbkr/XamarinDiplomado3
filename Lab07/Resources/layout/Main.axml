@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <TextView
+        android:text="Correo:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEmailAddress"
+        android:inputType="textEmailAddress"
+        android:hint="Email" />
+    <TextView
+        android:text="Contraseña:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textPassword"
+        android:password="true"
+        android:hint="Contraseña" />
+    <Button
+        android:text="Validar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ValidarButton" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ResultValidateText"
+        android:layout_margin="20dp"
+        android:text="Resultado"
+        android:textColor="#ff27cfdd" />
+</LinearLayout>
